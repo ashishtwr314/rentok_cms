@@ -11,10 +11,10 @@ module.exports = ({ env }) => ({
       user: env("DATABASE_USERNAME", "doadmin"),
       password: env("DATABASE_PASSWORD", "AVNS_f9ny2EdaAf3gSsJH99a"),
       // schema: env("DATABASE_SCHEMA", "public"), // Not required
-      ssl: {
-        ca: env("DATABASE_CA"),
-        // rejectUnauthorized: false,
-      },
+      // ssl: {
+      //   ca: env("DATABASE_CA"),
+      //   // rejectUnauthorized: false,
+      // },
     },
     debug: false,
     acquireConnectionTimeout: 300000,

@@ -7387,6 +7387,11 @@ os-tmpdir@~1.0.2:
   resolved "https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz"
   integrity sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==
 
+otp-generator@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/otp-generator/-/otp-generator-4.0.0.tgz"
+  integrity sha512-P0nG+RVCRDkZdEjXgoMeOTVF3jwMShAk8qYYNx+VNdWgxhcLbZQjdx3GfzgRTZENTx+9I14XfTDJZjKQJdBcVw==
+
 outvariant@^1.2.1, outvariant@^1.3.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/outvariant/-/outvariant-1.3.0.tgz"

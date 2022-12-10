@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_address_addresses",
+  "info": {
+    "displayName": "Address",
+    "icon": "city",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fullAddress": {
+      "type": "text"
+    },
+    "city": {
+      "type": "enumeration",
+      "enum": [
+        "Jagdalpur",
+        "Narayanpur",
+        "Bijapur",
+        "Kondagaon"
+      ]
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "latitudeDelta": {
+      "type": "float"
+    },
+    "longitudeDelta": {
+      "type": "float"
+    }
+  }
+}

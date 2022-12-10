@@ -20,17 +20,34 @@
 //   },
 // });
 
-const path = require("path");
+// const path = require("path");
+
+// module.exports = ({ env }) => ({
+//   connection: {
+//     client: "sqlite",
+//     connection: {
+//       filename: path.join(
+//         __dirname,
+//         "..",
+//         env("DATABASE_FILENAME", ".tmp/data.db")
+//       ),
+//     },
+//     useNullAsDefault: true,
+//   },
+// });
 
 module.exports = ({ env }) => ({
   connection: {
-    client: "sqlite",
+    client: "postgres",
     connection: {
-      filename: path.join(
-        __dirname,
-        "..",
-        env("DATABASE_FILENAME", ".tmp/data.db")
+      host: env(
+        "DATABASE_HOST",
+        "database-1.cqfiotqwxeci.ap-south-1.rds.amazonaws.com"
       ),
+      port: env.int("DATABASE_PORT", 5432),
+      database: env("DATABASE_NAME", "database-1"),
+      user: env("DATABASE_USERNAME", "postgres"),
+      password: env("DATABASE_PASSWORD", "AVNS_f9ny2EdaAf3gSsJH99a"),
     },
     useNullAsDefault: true,
   },

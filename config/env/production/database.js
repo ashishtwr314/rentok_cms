@@ -1,3 +1,4 @@
+const fs = require("fs");
 module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
@@ -10,7 +11,9 @@ module.exports = ({ env }) => ({
       database: env("DATABASE_NAME", "defaultdb"),
       user: env("DATABASE_USERNAME", "doadmin"),
       password: env("DATABASE_PASSWORD", "AVNS_f9ny2EdaAf3gSsJH99a"),
-      ssl: env("DATABASE_SSL", false),
+      ssl: {
+        ca: fs.readFileSync(`${__dirname}/ca_cert.crt`).toString(),
+      },
       // schema: env("DATABASE_SCHEMA", "public"), // Not required
       // ssl: {
       //   ca: env("DATABASE_CA"),

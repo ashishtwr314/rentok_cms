@@ -56,11 +56,6 @@
     "deliveryCharge": {
       "type": "biginteger"
     },
-    "product": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product"
-    },
     "startDate": {
       "type": "datetime"
     },
@@ -71,6 +66,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::rent-ok-user.rent-ok-user"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
     }
   }
 }

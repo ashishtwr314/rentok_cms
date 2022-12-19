@@ -22,7 +22,8 @@
     },
     "mobileNum": {
       "type": "biginteger",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "avatar": {
       "type": "media",
@@ -50,6 +51,12 @@
       "type": "component",
       "repeatable": true,
       "component": "address.address"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "uploaded_by"
     }
   }
 }

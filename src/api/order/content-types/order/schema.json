@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "orders",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product",
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
     "description": ""
   },
   "options": {
@@ -13,25 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "productName": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "productDescription": {
-      "type": "text",
-      "required": true
-    },
-    "rentPerDay": {
-      "type": "integer",
-      "required": true
-    },
-    "securityAmount": {
-      "type": "integer",
-      "required": true
+      "type": "text"
     },
     "images": {
       "type": "media",
       "multiple": true,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
@@ -49,19 +39,38 @@
       "relation": "oneToOne",
       "target": "api::sub-category.sub-category"
     },
+    "rentPerDay": {
+      "type": "biginteger"
+    },
+    "securityAmount": {
+      "type": "biginteger"
+    },
     "address": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "address.address"
     },
-    "uploaded_by": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::rent-ok-user.rent-ok-user",
-      "inversedBy": "products"
+    "finalPrice": {
+      "type": "biginteger"
     },
-    "promoted": {
-      "type": "boolean"
+    "deliveryCharge": {
+      "type": "biginteger"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "ordered_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::rent-ok-user.rent-ok-user"
     }
   }
 }
